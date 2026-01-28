@@ -1,5 +1,5 @@
-# Toddler
-Toddler is a Go package for structured error handling with custom 4-digit status codes, extending standard HTTP status semantics. It helps categorize and manage errors more granularly, with clear separation of public and internal values.
+# Toddlerr
+Toddlerr is a Go package for structured error handling with custom 4-digit status codes, extending standard HTTP status semantics. It helps categorize and manage errors more granularly, with clear separation of public and internal values.
 
 ## Why
 
@@ -16,12 +16,12 @@ package main
 
 import (
 	"fmt"
-	"github.com/beka-birhanu/toddler/error"
-	"github.com/beka-birhanu/toddler/status"
+	toddlerr "github.com/beka-birhanu/toddlerr/error"
+	"github.com/beka-birhanu/toddlerr/status"
 )
 
 func main() {
-	err := &error.Error{
+	err := &toddlerr.Error{
 		StatusCode:   status.UnauthorizedInvalidCredential,
 		PublicMessage: "Incorrect username or password. Please try again.",
 		ServiceMessage: "Incorrect password attempt for user ID: 6eb3d746-1be1-445e-9d76-5aa996754dbd",
@@ -58,7 +58,7 @@ When an error occurs, sensitive internal information (e.g., database details) sh
 #### Example
 
 ```go
-err := &error.Error{
+err := &toddlerr.Error{
 	StatusCode:   status.ServerErrorDatabase,
 	PublicMessage: "Internal server error.",
 	ServiceMessage: "Database connection failed.",
