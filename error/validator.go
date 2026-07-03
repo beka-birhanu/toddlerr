@@ -93,9 +93,8 @@ func FromValidationErrors(err error) *Error {
 	publicMeta := make(map[string]string)
 	serviceMeta := make(map[string]string)
 
-	// Select the "most specific" highest severity code (use the first one by default)
 	var finalStatus status.StatusCode
-	if len(fields) != 1 {
+	if len(fieldErrors) != 1 {
 		finalStatus = status.BadRequest
 	} else {
 		finalStatus = fieldErrors[0].StatusCode
