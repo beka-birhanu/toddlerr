@@ -1,4 +1,15 @@
-# Toddlerr
+# Toddlerr (v1) — Deprecated
+
+> **This module is deprecated.** Use [v2](./v2/README.md) instead.
+>
+> The module path changed from `github.com/beka-birhanu/toddler` to `github.com/beka-birhanu/toddlerr/v2` because the original name was a typo (missing an `r`). A standard `/v2` suffix on the same path was not possible, so v2 lives at the corrected path. This requires updating imports when migrating — it is not a drop-in upgrade.
+>
+> ```sh
+> go get github.com/beka-birhanu/toddlerr/v2
+> ```
+
+---
+
 Toddlerr is a Go package for structured error handling with custom 4-digit status codes, extending standard HTTP status semantics. It helps categorize and manage errors more granularly, with clear separation of public and internal values.
 
 ## Why
